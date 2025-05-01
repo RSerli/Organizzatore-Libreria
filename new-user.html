@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Libri</title>
+    <!-- Link CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/12727423a3.js" crossorigin="anonymous"></script>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- logo + link "HOME" -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./img/duck.png" alt="Logo-Img" width="60" height="60">
+                </a>
+                <!-- Pulsante Navbar quando la finestra è piccola -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./Catalogo-Libri.html">Catalogo
+                                libri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./Anagrafica-Utenti.html">Anagrafica utenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Storico-Prestiti.html">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Help.html">Help</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- main finestra "Nuovo Utente" -->
+        <form class="container pt-3">
+            <h2 class="text-center">Iscrizione Nuovo Utente</h2>
+            <div class="row row-gap-3">
+                <div class="row">
+                    <!-- text box nome del nuovo utente -->
+                    <div class="col-12 col-md-6">
+                        <label for="txt-User-FirstName" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="txt-User-FirstName" name="txt-User-FirstName"
+                            required>
+                    </div>
+                    <!-- text box cognome del nuovo utente -->
+                    <div class="col-12 col-md-6">
+                        <label for="txt-User-SecondName" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="txt-User-SecondName" name="txt-User-SecondName"
+                            required>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Data di nascita nuovo utente -->
+                    <div class="col-12 col-md-4">
+                        <label for="date-UserBirth" class="form-label">Data di nascita</label>
+                        <input type="date" class="form-control" id="date-UserBirth" name="date-UserBirth" required>
+                    </div>
+                    <!-- dropdown menù genere dell'utente -->
+                    <div class="col-12 col-md-4">
+                        <label for="cmb-GenreBook" class="form-label">Genere</label>
+                        <select id="cmb-GenreBook" class="form-select" name="cmb-GenreBook">
+                            <option value="" selected>Seleziona uno...</option>
+                            <option value="genere-M">Maschio</option>
+                            <option value="genere-F">Femmina</option>
+                            <option value="genere-A">Altro</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Indirizzo residenza -->
+                <div class="row">
+                    <div class="col-9 col-md-9">
+                        <label for="txt-User-Adress" class="form-label">Indirizzo di residenza</label>
+                        <input type="text" class="form-control" id="txt-User-Adress" name="txt-User-Adress" required>
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <label for="txt-User-AdressNumber" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="txt-User-AdressNumber" name="txt-User-AdressNumber"
+                            required>
+                    </div>
+                </div>
+                <!-- Contatti Utili -->
+                <div class="row">
+                    <!-- Email -->
+                    <div class="col-12 col-md-6">
+                        <label for="txt-User-Email" class="form-label">E-Mail</label>
+                        <input type="email" class="form-control" id="txt-User-Email" name="txt-User-Email" required>
+                    </div>
+                    <!-- Telefono -->
+                    <div class="col-12 col-md-6">
+                        <label for="txt-User-Phone" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" id="txt-User-Phone" name="txt-User-Phone" required>
+                    </div>
+                </div>
+                <!-- Accettazione privacy e newsletter -->
+                <div class="row justify-content-center">
+                    <div class="form-check form-switch col-12 col-md-7">
+                        <input class="form-check-input" type="checkbox" role="switch" id="chk-Privacy"
+                            name="chk-Privacy">
+                        <label class="form-check-label" for="chk-Privacy">Dichiaro di aver letto e accettato le
+                            condizioni di iscrizione</label>
+                    </div>
+                    <div class="form-check form-switch col-12 col-md-7">
+                        <input class="form-check-input" type="checkbox" role="switch" id="chk-NewsLetter"
+                            name="chk-NewsLetter">
+                        <label class="form-check-label" for="chk-NewsLetter">Acconsento di ricevere le
+                            newsletter</label>
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="row">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <!-- Link JS Bottstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
